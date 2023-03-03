@@ -88,7 +88,12 @@ Open the configuration file:
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
-For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port (in some cases, your adapter might need additional configuration parameters, see [supported Adapters](../adapters/README.md)). This can be done by changing the section below in your `configuration.yaml`.
+For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port (in some cases, your adapter might need additional configuration parameters, see [supported Adapters](../adapters/README.md)). This can be done by changing the section below in your `configuration.yaml`. If you use Serial by ID, the entry in the configuration.yaml looks like this:
+
+# Serial settings
+serial:
+  port: >-
+    /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_xxxxxxxxxxxxxx
 
 ```yaml
 # MQTT settings
